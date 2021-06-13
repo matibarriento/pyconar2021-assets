@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="gr2" gradientTransform="rotate(110)">
+      <stop offset="20%"  stop-color="rgba(253,181,21,.3)" /><stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+    <linearGradient id="grf" gradientTransform="rotate(110)">
+      <stop offset="20%"  stop-color="rgba(255,255,255,.3)" /><stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+  </defs>
+
+<polygon fill="url('#gr2')" points="1920.5,771.3 1920.5,239.1 1687.4,391.4 1342.4,548.7 887.4,604.1 586.3,553.5 292.3,332.5 0.5,247.2 0.5,771.3 "/>
+<polygon fill="url('#gr2')" points="1920.5,771.3 1920.5,465.3 1731.4,518 1366.4,602.5 890.4,640.5 549.3,597.2 259.3,440.8 0.5,400 0.5,771.3 "/>
+<polygon fill="url('#gr2')" points="1920.5,771.3 1920.5,613.7 1717.4,656.2 1378.4,671.9 914.4,676.3 544.3,649.6 214.3,569.9 0.5,537.8 0.5,771.3 "/>
+<path fill="url('#grf')" d="M1277.5,558.9h-634c0-175.1,141.9-317,317-317S1277.5,383.9,1277.5,558.9z"/>
+</svg>
