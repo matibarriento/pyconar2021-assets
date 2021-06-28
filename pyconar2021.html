@@ -1,11 +1,11 @@
-{% load staticfiles %}
+<!--{% load staticfiles %}
 {% load filters %}
 {% load i18n %}
 {% load l10n %}
 {% load cropping %}
 {% load account %}
 
-{% user_display user as user_display %}
+{% user_display user as user_display %}-->
 <!DOCTYPE html>
 <html lang="es-AR">
 
@@ -67,7 +67,7 @@
 <body class="f1 text-color-3">
     {% block navbar %}
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top color-1 glow" style="z-index: 9999">
+    <nav class="navbar navbar-fixed-top f2" style="z-index: 9999">
         <div class="">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -79,7 +79,7 @@
                     <img class="img-responsive eventol-logo" src="https://github.com/samsagaz/pyconar2020_template/raw/master/demo/img/pyar-logo.png" alt="EventoL Logo">
                 </a>
             </div>
-            <div id="navbar" class="collapse navbar-collapse color-1 glow">
+            <div id="navbar" class="collapse navbar-collapse">
                 {% block navbar-menu %}
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated and event_slug is None %}
@@ -1482,11 +1482,17 @@
         
 	<div id="portada" class="relative">
 		<div id="portada-content">
-			<h2 class="f2"><span class="text-outline">octubre</span><span class="sub text-color-1">18 al 22</span></h2>
+			<h2 class="f2"><span class="text-outline">octubre</span><span class="sub text-color-1">25 al 29</span></h2>
 			<div id="timer" class="f2 margin-auto">
 				<div id="clock" class="margin-auto"><span>-</span><span>-</span><span>-</span><span>-</span></div>
 				<div><span>días</span><span>horas</span><span>minutos</span><span>segundos</span></div>
 			</div>	
+		</div>
+		<div class="social-icons center">
+			<a href="https://www.instagram.com/pythonargentina/"><i class="fa fa-instagram"></i></a>
+			<a href="https://www.facebook.com/pyconar/"><i class="fa fa-facebook-square"></i></a>
+			<a href="https://t.me/pyconar"><i class="fa fa-telegram"></i></a>
+			<a href="https://twitter.com/pyconar"><i class="fa fa-twitter-square"></i></a>
 		</div>
 	</div>
         
@@ -1546,7 +1552,7 @@
 		}
 		
 		//reloj		
-		var countDownDate = new Date("oct 18, 2021 10:00:00").getTime();
+		var countDownDate = new Date("oct 25, 2021 10:00:00").getTime();
 		var x = setInterval(function() {
 		var now = new Date().getTime();
 		var distance = countDownDate - now;

@@ -123,12 +123,12 @@ body::-webkit-scrollbar-thumb {  background-color: #fff;  border-radius: 7px;}
 
 /*front*/
 #py{width:56vh;margin:50px auto 0;display:block; position:fixed;left: -3%;}
-#py polygon,#py circle{opacity:0}
-.pyenter,#py circle,#py .ojo{animation: pypaths 10s ease infinite}
+
+.pyenter,#py circle,#py .ojo{animation: pypaths 10s ease }
 #lengua{opacity:0;animation: lengua 5s ease 2s infinite}
 #py>circle{animation-delay:5s}
 #py .ojo:last-child{animation-delay:.3s}
-@keyframes pypaths {0%,100%{opacity:0}10%,90%{opacity:1}}
+@keyframes pypaths {0%,20%,100%{opacity:1}10%{opacity:0}}
 @keyframes lengua {0%,20%,48%,100%{opacity:0}12%,35%{opacity:1}}
 
 .py-cola{position:absolute;top: -30vh;overflow:hidden;width:100%;height:80vh;}
@@ -162,6 +162,13 @@ body::-webkit-scrollbar-thumb {  background-color: #fff;  border-radius: 7px;}
 
 .separador{ margin-top: 68vh }
 
+.navbar{padding-right:10px}
+.navbar{color:var(--c3) !important;background-image: linear-gradient(to bottom right,#ffffff,#fbe76a)}
+.navbar i, .navbar .caret{color: var(--c1) !important;}
+.eventol-logo { border-radius: 5px;}
+.social-icons{ position: absolute; width: 100%; margin-top: calc(46vh + 125px);left:-5px}
+.social-icons a i{font-size: 45px; margin:0 10px;color:#fdd04f;transition: transform .5s ease;text-shadow: 2px -3px 5px #ffffff99;}
+.social-icons a:hover i{transform: scale(1.1);}
 
 
 @media screen and (max-width:1350px){
@@ -170,6 +177,8 @@ body::-webkit-scrollbar-thumb {  background-color: #fff;  border-radius: 7px;}
 }
 
 @media screen and (max-width:980px){
+	.social-icons{ margin-top: 75px}
+	.social-icons a i {font-size: 34px}
 	#main-footer{position:relative}
 	#main-footer .corte {z-index: 0;}
 	#portada{height:130vh}
