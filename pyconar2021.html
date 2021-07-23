@@ -1486,7 +1486,12 @@
 			<div id="timer" class="f2 margin-auto">
 				<div id="clock" class="margin-auto"><span>-</span><span>-</span><span>-</span><span>-</span></div>
 				<div><span>días</span><span>horas</span><span>minutos</span><span>segundos</span></div>
-			</div>	
+			</div>
+            {% if event.activity_proposal_is_open and event.use_proposals %}
+            <a class="btn-cromo" href="https://eventos.python.org.ar/events/pyconar2021/activity/proposal/" target="_blank">
+                <span class="cromo">proponé tu charla</span>
+            </a>
+            {% endif %}
 		</div>
 		<div class="social-icons center">
 			<a href="https://www.instagram.com/pythonargentina/"><i class="fa fa-instagram"></i></a>
@@ -1496,12 +1501,7 @@
 		</div>
 	</div>
 
-        <div id="propone" class="align-c">
-            <a class="btn-cromo" href="https://eventos.python.org.ar/events/pyconar2021/activity/proposal/" target="_blank">
-                <span class="cromo">proponé tu charla</span>
-            </a>
-        </div>
-	
+    {% if event.activity_proposal_is_open and event.use_proposals %}
     <section class="rel">
         <div class="py-cola"><div></div></div>  
         <div class=" rel margin-auto lista max-w-960 full-width align-c">
@@ -1521,11 +1521,15 @@
                 </article>
             </div>
         </div>
-    </section> 
+    </section>
+    {% endif %} 
     
     <div class="margin-l"></div>
 
     <section class="rel">
+        {% if not event.activity_proposal_is_open or not event.use_proposals %}
+        <div class="py-cola"><div></div></div>
+        {% endif %} 
         <div class=" rel margin-auto lista full-width align-c">
             <div class="side-grid infografia-2 padd-m">         
             <h3 class="f2 titulo text-color-3 align-c">CHARLAS</h3> 
@@ -1592,7 +1596,7 @@
             
         </div>
         <div id="github" class="full-width color-3 text-white align-c">
-            <a><i class="fa fa-github"></i>You have the power!</a>
+            <a class="text-white"><i class="fa fa-github"></i>You have the power!</a>
         </div>  
      
     </footer>
