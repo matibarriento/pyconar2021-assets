@@ -1477,6 +1477,9 @@
 
     <div id="portada" class="relative">
         <div id="portada-content">
+            <!--a style="text-decoration: none;" href="" tabindex="0">
+				<img id="discord" class="" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/discord.png" alt="Discord" style="width: 100px;">
+			</a-->
             <h2 class="f2"><span class="text-outline">octubre</span><span class="sub text-color-1">25 al 29</span></h2>
             <div id="timer" class="f2 margin-auto">
                 <div id="clock" class="margin-auto"><span>-</span><span>-</span><span>-</span><span>-</span></div>
@@ -1582,7 +1585,7 @@
 
                 <div>
                     <article>
-                        <h3 class="cromo margin-none">DISCORD</h3>
+                        <h3 class="cromo titulo margin-none">DISCORD</h3>
                         <img id="discord" class="full-width" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/discord.png" alt="">
                         <p>Sumate al <b>canal de Discord</b> para charlar hacer tus preguntas, charlar con la comunidad y contactarte con nuestros sponsors</p>
                         {% if user.is_authenticated and user|is_registered:event_slug %}
@@ -1611,7 +1614,7 @@
                         <li>
                         <li>Empresas que participan en esta edición: ASAPP, Endava, Eynes, Faraday, Invgate, Mercado Libre, Onapsis, Shipero, Spark Digital, TradeHelm
                         </li>
-                        <li> Van a ser los días martes 26, miércoles 27 y jueves 28 desde las 13.30 por Discord<li>
+                        <li> Van a ser los días martes 26, miércoles 27 y jueves 28 desde las 13.30 por Discord</li>
                         {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/WQNzeGzadxnhPuij7" target="_blank">Reservá tu cupo acá</a></b>
@@ -1649,22 +1652,30 @@
         <div class=" rel margin-auto lista full-width align-c">
             <div class="side-grid infografia-2 padd-m">
                 <article style=" max-width:600px;background:#fff;border-radius:20px;padding-bottom:40px">
-                     <h3 class="cromo margin-none">SPONSORS</h3>
+                     <h3 class="cromo titulo margin-none">SPONSORS</h3>
                      <img id="sponsors" class="full-width" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/sponsors.png"
                     alt="Lista de Sponsors" style=" max-width:100%;max-height:none;transition:none;margin:20px 0;">
                 </article>
             </div>
         </div>
     </section>
-
+        
+    <div class="margin-l"></div>
+	<section class="rel full-width align-c side-grid padd-m">
+        <h2 class="cromo titulo margin-none" style="display: block;font-size: 4em;">KEYNOTE</h2>
+		<img alt="Neal Norwitz" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/neal.svg" style="width:90%;max-width:470px;max-height:none;transition:none;filter: drop-shadow(0px 0px 40px #ffffff);">
+		<article style="max-width:600px;background:#fff;border-radius:20px;padding-bottom:40px;margin:auto;box-shadow:0 0 80px #fff;" class="padd-m">		
+			<h3 class="cromo margin-none" style="font-size: 2.5em;">Neal Norwitz</h3>
+			<p class="align-l">Neal has started several open source projects including pychecker and cppclean. He's been using Python for 25+ years (~v1.2) and worked extensively on the Python core language for 5+ years. Since 2019, Neal has been a Distinguished Engineer at ASAPP where he is the technical leader overseeing architecture for the company. He was a software engineer at Google from 2005 to 2019 where he worked on several infrastructure projects for google.com, youtube.com, and other systems.</p>
+        </article>
+    </section>
     <div class="margin-l"></div>
 
     <section class="rel">
-        <div class="relative .full-width color-white small-padding clear center" style="margin-left: 5em;
-    margin-right: 5em;">
-                <div class="relative color-white center">
-                    <div class="row" style="text-align: center;">
-                        <h1 class="medium-margin small-padding titulo text-white color-1 inline-block border-retro-1">Charlas</h1>
+        <div class="relative .full-width small-padding clear center" style="margin-left: 1em; margin-right: 1em;">
+                <div class="relative align-c">
+                    <div class="row" style="background: #ffffffcc;box-shadow: inset 0 0 300px #fff, 0 0 70px #ccf;display:inline-block;padding:20px;margin:10px;">
+                        <h1 class="cromo titulo inline-block">Charlas</h1>
                     </div>
                     <div class="color-white">
                         <div id="slick_charlas">
