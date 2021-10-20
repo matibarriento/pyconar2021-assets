@@ -25,10 +25,10 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <!-- link a hoja de estilos nuevos-->
-     
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@300;400;700&family=Days+One&family=Jost:wght@200;400;800&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  
+
     <link rel="shortcut icon" type="image/png" href="{% static "favicon.ico" %}" />
     <link rel="stylesheet" type="text/css" media="all" href="{% static "manager/css/eventol-bootstrap.css" %}" />
     <link rel="stylesheet" type="text/css" media="all" href="{% static "manager/css/eventol.css" %}" />
@@ -270,15 +270,10 @@
                     <!-- language.dropdown end -->
                     {% endif %}
                     {% if not user.is_authenticated %}
-                    <li class="dropdown">
-                        <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Organizadores" %} <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{% url "account_login" %}">
-                                    <i class="material-icons">account_box</i> {% trans "Login" %}
-                                </a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="{% url "account_login" %}">
+                            <i class="material-icons">account_box</i> {% trans "Login" %}
+                        </a>
                     </li>
                     {% else %}
                     <li class="dropdown">
@@ -1459,7 +1454,7 @@
         </radialGradient>
     </svg>
 
-    
+
 <!--     <nav class="navbar navbar-default navbar-fixed-top">
 
     </nav> -->
@@ -1479,7 +1474,7 @@
             <div id="flare-b"></div>
         </h1>
     </div>
-        
+
     <div id="portada" class="relative">
         <div id="portada-content">
             <h2 class="f2"><span class="text-outline">octubre</span><span class="sub text-color-1">25 al 29</span></h2>
@@ -1503,7 +1498,7 @@
 
     {% if event.activity_proposal_is_open and event.use_proposals %}
     <section class="rel">
-        <div class="py-cola"><div></div></div>  
+        <div class="py-cola"><div></div></div>
         <div class=" rel margin-auto lista max-w-960 full-width align-c">
             <div class="side-grid infografia-1 padd-m">
              <h2 class="cromo margin-none">SPEAKERS</h2>
@@ -1522,15 +1517,15 @@
             </div>
         </div>
     </section>
-    {% endif %} 
-    
+    {% endif %}
+
     <div class="margin-l"></div>
 
     <!-- Tallers -->
     <section class="rel">
         <div class=" rel margin-auto lista full-width align-c">
-            <div class="side-grid infografia-2 padd-m">         
-            <h3 class="f2 titulo text-color-3 align-c">Inscripción a Talleres</h3> 
+            <div class="side-grid infografia-2 padd-m">
+            <h3 class="f2 titulo text-color-3 align-c">Inscripción a Talleres</h3>
                 <article>
                     <h3 class="cromo margin-none">Python por peso</h3>
                     <ul class="align-l">
@@ -1554,7 +1549,7 @@
                     <ul class="align-l">
                         <li>Talleristas: Mariano Reingart y Nicolas Sandoval</li>
                         <li>PyZombis es un curso virtual completo de introducción a la programación, abierto a la comunidad y gratuito. Podrás dar tus primeros pasos con Python, construir programas sencillos y recorrer aspectos avanzados como utilización de API, interfaces Web MVC, Archivos, Bases de Datos y hasta Juegos con PyGame!!!</li>
-                        
+
                         {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/cCFv6uAJFtpbfRpb8" target="_blank">Reservá tu cupo acá</a></b>
@@ -1572,7 +1567,7 @@
                     <ul class="align-l">
                         <li>Talleristas: Sofía Martin, Ariel Ramos, Liliana Hurtado, Sebastián Flores Benner</li>
                         <li>El taller se enfoca en transmitir experiencias de enseñanza realizadas en un contexto de trabajo remoto (por covid-19) con recursos de acceso libre para docentes de diferentes niveles y áreas de estudio. Somos un grupo interdisciplinario que, debido a la necesidad de formar a docentes en el uso de estas herramientas, conformamos un grupo de trabajo donde el rol de los informáticos fue adecuar los contenidos a una metodología que ponga en juego la enseñanza desde un punto de vista dinámica y pedagógica</li>
-                        
+
                         {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/UCtBp8zxn4QUNKhQA" target="_blank">Reservá tu cupo acá</a></b>
@@ -1580,7 +1575,7 @@
                         {% else %}
                         <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
                         {% endif %}
-                        
+
                         <li>El taller tiene lugar el 29/10 a las 15hs por Zoom </li>
                     </ul>
                 </article>
@@ -1607,8 +1602,8 @@
 
     <section class="rel">
         <div class=" rel margin-auto lista full-width align-c">
-            <div class="side-grid infografia-2 padd-m">         
-            <h3 class="f2 titulo text-color-3 align-c">+ Actividades</h3> 
+            <div class="side-grid infografia-2 padd-m">
+            <h3 class="f2 titulo text-color-3 align-c">+ Actividades</h3>
                 <article>
                     <h3 class="cromo margin-none">Speed Interviews</h3>
                     <ul class="align-l">
@@ -1616,7 +1611,7 @@
                         <li>
                         <li>Empresas que participan en esta edición: ASAPP, Endava, Eynes, Faraday, Invgate, Mercado Libre, Onapsis, Shipero, Spark Digital, TradeHelm
                         </li>
-                        <li> Van a ser los días martes 26, miércoles 27 y jueves 28 desde las 13.30 por Discord<li>           
+                        <li> Van a ser los días martes 26, miércoles 27 y jueves 28 desde las 13.30 por Discord<li>
                         {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/WQNzeGzadxnhPuij7" target="_blank">Reservá tu cupo acá</a></b>
@@ -1634,7 +1629,7 @@
                         <li> La regla es: a los 5 minutos, hayas terminado o no, se termina tu charla.</li>
 
                         <li> Van a ser el día martes 26/10 y el jueves 28/10 a las 16.30 en VIVO y en DIRECTO.<li>
-                        
+
                         {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/xyiG3Tj9163CtmBS9" target="_blank">Reservá tu cupo acá</a></b>
@@ -1655,8 +1650,8 @@
             <div class="side-grid infografia-2 padd-m">
                 <article style=" max-width:600px;background:#fff;border-radius:20px;padding-bottom:40px">
                      <h3 class="cromo margin-none">SPONSORS</h3>
-                     <img id="sponsors" class="full-width" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/sponsors.png" 
-                    alt="Lista de Sponsors" style=" max-width:100%;max-height:none;transition:none;margin:20px 0;"> 
+                     <img id="sponsors" class="full-width" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/sponsors.png"
+                    alt="Lista de Sponsors" style=" max-width:100%;max-height:none;transition:none;margin:20px 0;">
                 </article>
             </div>
         </div>
@@ -1704,10 +1699,10 @@
     <section class="rel">
         {% if not event.activity_proposal_is_open%}
         <div class="py-cola"><div></div></div>
-        {% endif %} 
+        {% endif %}
         <div class=" rel margin-auto lista full-width align-c">
-            <div class="side-grid infografia-2 padd-m">         
-            <h3 class="f2 titulo text-color-3 align-c">CHARLAS</h3> 
+            <div class="side-grid infografia-2 padd-m">
+            <h3 class="f2 titulo text-color-3 align-c">CHARLAS</h3>
                 <article>
                      <h3 class="cromo margin-none">EN VIVO</h3>
                     <img id="vivo" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/vivo.png" alt="">
@@ -1717,7 +1712,7 @@
                         <li>Va a haber una persona del <b>staff moderando</b> y coordinando las charlas</li>
                     </ul>
                 </article>
-        
+
                 <article>
                  <h3 class="cromo margin-none">GRABADAS</h3>
                     <img id="grabadas" class="full-width" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/grabadas.png" alt="">
@@ -1727,7 +1722,7 @@
                         <li><b>Grabás tu charla y la mandás</b></li>
                     </ul>
                 </article>
-                
+
                 <article>
                      <h3 class="cromo margin-none">TALLERES</h3>
                     <img id="talleres" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/talleres.png" alt="">
@@ -1747,7 +1742,7 @@
                         <p>Las charlas se comienzan a grabar una vez que ya fue seleccionada.</p>
                     </article>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -1756,24 +1751,24 @@
     <div class="separador"></div>
 
     <footer id="main-footer" class="align-c text-white corte-1">
-    
+
         <div class="corte full-width rel"></div>
         <div id="footer-icons" class="padd-b ">
-            
+
             <h3 class="f1 subtitulo text-white">Seguir PyConAr 2021!!</h3>
-            
+
             <div class="center">
                 <a href="https://www.instagram.com/pythonargentina/"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.facebook.com/pyconar/"><i class="fa fa-facebook-square"></i></a>
                 <a href="https://t.me/pyconar"><i class="fa fa-telegram"></i></a>
                 <a href="https://twitter.com/pyconar"><i class="fa fa-twitter-square"></i></a>
             </div>
-            
+
         </div>
         <div id="github" class="full-width color-3 text-white align-c">
             <a class="text-white"><i class="fa fa-github"></i>You have the power!</a>
-        </div>  
-     
+        </div>
+
     </footer>
     {% block script %}
     <script src="{% static "manager/bower_components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
@@ -1860,8 +1855,8 @@
             pygons[i].style.animationDelay= time;
             pygons[i].classList.add('pyenter');
         }
-        
-        //reloj     
+
+        //reloj
         var countDownDate = new Date("oct 25, 2021 10:00:00").getTime();
         var x = setInterval(function() {
         var now = new Date().getTime();
@@ -1878,7 +1873,7 @@
             document.getElementById("clock").innerHTML =  "<span>0</span><span>0</span><span>0</span><span>0</span>";
           }
         }, 1000);
-         
+
     </script>
     {% block more-script %}{% endblock %}
 </body>
