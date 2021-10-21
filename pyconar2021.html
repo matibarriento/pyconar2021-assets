@@ -1476,10 +1476,10 @@
     </div>
 	
 	<div class="social-icons align-c">
-            <a href="https://www.instagram.com/pythonargentina/"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.facebook.com/pyconar/"><i class="fa fa-facebook-square"></i></a>
-            <a href="https://t.me/pyconar"><i class="fa fa-telegram"></i></a>
-            <a href="https://twitter.com/pyconar"><i class="fa fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/pythonargentina/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/pyconar/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://t.me/pyconar" target="_blank"><i class="fa fa-telegram"></i></a>
+            <a href="https://twitter.com/pyconar" target="_blank"><i class="fa fa-twitter-square"></i></a>
         </div>
 
     <div id="portada" class="relative">
@@ -1493,7 +1493,7 @@
 				{% if user.is_authenticated and user|is_registered:event_slug %}
 				<b>Pronto habilitarenos el servidor!</b>
 				{% else %}
-				<b>Para ver el link registrarte al evento</b>
+				<a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link tenés que registrarte al evento</b></a>
 				{% endif %}	 
 			</p>  
 		</article>
@@ -1572,7 +1572,7 @@
                             <b><a href="https://forms.gle/WQNzeGzadxnhPuij7" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
                         {% else %}
-                        <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
+                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
                         {% endif %}
                     </ul>
                 </article>
@@ -1591,7 +1591,7 @@
                             <b><a href="https://forms.gle/xyiG3Tj9163CtmBS9" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
                         {% else %}
-                        <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
+                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
                         {% endif %}
                     </ul>
                 </article>
@@ -1618,7 +1618,7 @@
                             <b><a href="https://forms.gle/qBZhNhFdSXD9BZA38" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
                         {% else %}
-                        <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
+                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
                         {% endif %}
 
                         <li>El taller tiene lugar el 25/10 a las 15hs por Zoom </li>
@@ -1637,7 +1637,7 @@
                             <b><a href="https://forms.gle/cCFv6uAJFtpbfRpb8" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
                         {% else %}
-                        <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
+                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
                         {% endif %}
 
                         <li>El taller tiene lugar el 27/10 a las 15hs por Zoom </li>
@@ -1656,7 +1656,7 @@
                             <b><a href="https://forms.gle/UCtBp8zxn4QUNKhQA" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
                         {% else %}
-                        <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
+                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
                         {% endif %}
 
                         <li>El taller tiene lugar el 29/10 a las 15hs por Zoom </li>
@@ -1785,10 +1785,10 @@
             <h3 class="f1 subtitulo text-white">Seguir PyConAr 2021!!</h3>
 
             <div class="center">
-                <a href="https://www.instagram.com/pythonargentina/"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.facebook.com/pyconar/"><i class="fa fa-facebook-square"></i></a>
-                <a href="https://t.me/pyconar"><i class="fa fa-telegram"></i></a>
-                <a href="https://twitter.com/pyconar"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/pythonargentina/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/pyconar/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://t.me/pyconar" target="_blank"><i class="fa fa-telegram"></i></a>
+                <a href="https://twitter.com/pyconar" target="_blank"><i class="fa fa-twitter-square"></i></a>
             </div>
 
         </div>
