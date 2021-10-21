@@ -1474,12 +1474,30 @@
             <div id="flare-b"></div>
         </h1>
     </div>
+	
+	<div class="social-icons align-c">
+            <a href="https://www.instagram.com/pythonargentina/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/pyconar/"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://t.me/pyconar"><i class="fa fa-telegram"></i></a>
+            <a href="https://twitter.com/pyconar"><i class="fa fa-twitter-square"></i></a>
+        </div>
 
     <div id="portada" class="relative">
         <div id="portada-content">
-            <!--a style="text-decoration: none;" href="" tabindex="0">
-				<img id="discord" class="" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/discord.png" alt="Discord" style="width: 100px;">
-			</a-->
+		<article>
+			<a style="text-decoration: none;" href="" tabindex="0">
+				<img id="discord" class="" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/discord.png" alt="Discord" style="width: 140px;">
+			</a>
+   			 <p style="width: 280px;margin: 0 auto 10px;">
+				Sumate al <b>canal de Discord</b> para hacer tus preguntas, charlar con la comunidad y contactarte con nuestros sponsors.
+				{% if user.is_authenticated and user|is_registered:event_slug %}
+				<b>Pronto habilitarenos el servidor!</b>
+				{% else %}
+				<b>Para ver el link registrarte al evento</b>
+				{% endif %}	 
+			</p>  
+		</article>
+			
             <h2 class="f2"><span class="text-outline">octubre</span><span class="sub text-color-1">25 al 29</span></h2>
             <div id="timer" class="f2 margin-auto">
                 <div id="clock" class="margin-auto"><span>-</span><span>-</span><span>-</span><span>-</span></div>
@@ -1491,12 +1509,27 @@
             </a>
             {% endif %}
         </div>
-        <div class="social-icons center">
-            <a href="https://www.instagram.com/pythonargentina/"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.facebook.com/pyconar/"><i class="fa fa-facebook-square"></i></a>
-            <a href="https://t.me/pyconar"><i class="fa fa-telegram"></i></a>
-            <a href="https://twitter.com/pyconar"><i class="fa fa-twitter-square"></i></a>
-        </div>
+	    
+	    <div id="inscripciones" class="aling-c">
+    <div>
+		<h3 class="cromo" style="margin-bottom: 20px;position:relative;font-size:2em">Inscribite a:</h3>
+		<div style="position:relative;top:-15px;height:170px;display: flex;justify-content: space-around;">
+			<a href="#interviews">
+				<img style="width:90px;" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/reloj.png" alt="speed interviews">
+				<h4 class="f2">SPEED INTERVIEWS</h4>
+			</a>
+			<a href="#relampago">
+				<img style="height:200px;" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/relampago.png" alt="CHARLAS RELÁMPAGO">
+				<h4 class="f2">CHARLAS RELÁMPAGO</h4>
+			</a>
+			<a href="#talleres" class="rel">
+				<img src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/talleres.png"
+				alt="talleres" style="max-height: 120%; top: -30px; position: relative;">
+			   <h4 class="f2" style="top: 94px;">TALLERES</h4>
+			</a>
+		</div>
+    </div>
+</div>
     </div>
 
     {% if event.activity_proposal_is_open and event.use_proposals %}
@@ -1522,15 +1555,60 @@
     </section>
     {% endif %}
 
-    <div class="margin-l"></div>
 
-    <!-- Tallers -->
     <section class="rel">
+        <div class=" rel margin-auto lista full-width align-c">
+            <div class="side-grid infografia-2 padd-m">
+            <h3 class="f2 titulo text-color-3 align-c">+ Actividades</h3>
+                <article id="interviews">
+                    <h3 class="cromo margin-none">Speed Interviews</h3>
+			<hr style="opacity: 0;">
+                    <ul class="align-l">
+                        <li>Las speed interviews son entrevistas de 10 minutos con cada uno de los 10 sponsors que participan de la actividad este año. Tiene cupo limitado</li>
+                        <li>Empresas que participan en esta edición: ASAPP, Endava, Eynes, Faraday, Invgate, Mercado Libre, Onapsis, Shipero, Spark Digital, TradeHelm</li>
+                        <li> Van a ser los días martes 26, miércoles 27 y jueves 28 desde las 13.30 por Discord</li>
+                        {% if user.is_authenticated and user|is_registered:event_slug %}
+                        <li>
+                            <b><a href="https://forms.gle/WQNzeGzadxnhPuij7" target="_blank">Reservá tu cupo acá</a></b>
+                        </li>
+                        {% else %}
+                        <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
+                        {% endif %}
+                    </ul>
+                </article>
+
+                <article id="relampago">
+                    <h3 class="cromo margin-none">Charlas relámpago</h3>
+			<hr style="opacity: 0;">
+                    <ul class="align-l">
+                        <li>Las charlas relámpago son charlas de máximo 5 minutos, contando brevemente alguna idea o conocimiento que quieras compartir con la comunidad. Tiene cupo limitado </li>
+                        <li> La regla es: a los 5 minutos, hayas terminado o no, se termina tu charla.</li>
+
+                        <li> Van a ser el día martes 26/10 y el jueves 28/10 a las 16.30 en VIVO y en DIRECTO.<li>
+
+                        {% if user.is_authenticated and user|is_registered:event_slug %}
+                        <li>
+                            <b><a href="https://forms.gle/xyiG3Tj9163CtmBS9" target="_blank">Reservá tu cupo acá</a></b>
+                        </li>
+                        {% else %}
+                        <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
+                        {% endif %}
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+	<div class="margin-l"></div>
+	
+    <!-- Tallers -->
+    <section id="talleres" class="rel">
         <div class=" rel margin-auto lista full-width align-c">
             <div class="side-grid infografia-2 padd-m">
             <h3 class="f2 titulo text-color-3 align-c">Inscripción a Talleres</h3>
                 <article>
                     <h3 class="cromo margin-none">Python por peso</h3>
+			<hr style="opacity: 0;">
                     <ul class="align-l">
                         <li>Tallerista: Yonatan Romero</li>
                         <li>En 2018 Hernán Wilkinson hizo una charla de cómo debería ser el desarrollo de software. En esa charla mostró un lindo ejemplo de manejo de unidades en Smalltalk. En esta charla vamos a tratar de implementar esa misma idea en Python aplicando TDD.</li>
@@ -1549,6 +1627,7 @@
 
                 <article>
                     <h3 class="cromo margin-none">PyZombis: curso online interactivo de intro a la programación en Python</h3>
+			<hr style="opacity: 0;">
                     <ul class="align-l">
                         <li>Talleristas: Mariano Reingart y Nicolas Sandoval</li>
                         <li>PyZombis es un curso virtual completo de introducción a la programación, abierto a la comunidad y gratuito. Podrás dar tus primeros pasos con Python, construir programas sencillos y recorrer aspectos avanzados como utilización de API, interfaces Web MVC, Archivos, Bases de Datos y hasta Juegos con PyGame!!!</li>
@@ -1567,6 +1646,7 @@
 
                 <article>
                     <h3 class="cromo margin-none">Programar y Reprogramar Recursos para Docentes (Python + Jupyter)</h3>
+			<hr style="opacity: 0;">
                     <ul class="align-l">
                         <li>Talleristas: Sofía Martin, Ariel Ramos, Liliana Hurtado, Sebastián Flores Benner</li>
                         <li>El taller se enfoca en transmitir experiencias de enseñanza realizadas en un contexto de trabajo remoto (por covid-19) con recursos de acceso libre para docentes de diferentes niveles y áreas de estudio. Somos un grupo interdisciplinario que, debido a la necesidad de formar a docentes en el uso de estas herramientas, conformamos un grupo de trabajo donde el rol de los informáticos fue adecuar los contenidos a una metodología que ponga en juego la enseñanza desde un punto de vista dinámica y pedagógica</li>
@@ -1582,66 +1662,7 @@
                         <li>El taller tiene lugar el 29/10 a las 15hs por Zoom </li>
                     </ul>
                 </article>
-
-                <div>
-                    <article>
-                        <h3 class="cromo titulo margin-none">DISCORD</h3>
-                        <img id="discord" class="full-width" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/discord.png" alt="">
-                        <p>Sumate al <b>canal de Discord</b> para charlar hacer tus preguntas, charlar con la comunidad y contactarte con nuestros sponsors</p>
-                        {% if user.is_authenticated and user|is_registered:event_slug %}
-                        <li>
-                            <b>Ya falta poco para que habilitemos el servidor de Discord!</b>
-                        </li>
-                        {% else %}
-                        <li><b>Para ver el link de Discord tenés que registrarte al evento</b></li>
-                        {% endif %}
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="margin-l"></div>
-
-    <section class="rel">
-        <div class=" rel margin-auto lista full-width align-c">
-            <div class="side-grid infografia-2 padd-m">
-            <h3 class="f2 titulo text-color-3 align-c">+ Actividades</h3>
-                <article>
-                    <h3 class="cromo margin-none">Speed Interviews</h3>
-                    <ul class="align-l">
-                        <li>Las speed interviews son entrevistas de 10 minutos con cada uno de los 10 sponsors que participan de la actividad este año. Tiene cupo limitado</li>
-                        <li>
-                        <li>Empresas que participan en esta edición: ASAPP, Endava, Eynes, Faraday, Invgate, Mercado Libre, Onapsis, Shipero, Spark Digital, TradeHelm
-                        </li>
-                        <li> Van a ser los días martes 26, miércoles 27 y jueves 28 desde las 13.30 por Discord</li>
-                        {% if user.is_authenticated and user|is_registered:event_slug %}
-                        <li>
-                            <b><a href="https://forms.gle/WQNzeGzadxnhPuij7" target="_blank">Reservá tu cupo acá</a></b>
-                        </li>
-                        {% else %}
-                        <li><b>Para ver el link de inscripción tenés que registrarte al evento<b></li>
-                        {% endif %}
-                    </ul>
-                </article>
-
-                <article>
-                    <h3 class="cromo margin-none">Charlas relámpago</h3>
-                    <ul class="align-l">
-                        <li>Las charlas relámpago son charlas de máximo 5 minutos, contando brevemente alguna idea o conocimiento que quieras compartir con la comunidad. Tiene cupo limitado </li>
-                        <li> La regla es: a los 5 minutos, hayas terminado o no, se termina tu charla.</li>
-
-                        <li> Van a ser el día martes 26/10 y el jueves 28/10 a las 16.30 en VIVO y en DIRECTO.<li>
-
-                        {% if user.is_authenticated and user|is_registered:event_slug %}
-                        <li>
-                            <b><a href="https://forms.gle/xyiG3Tj9163CtmBS9" target="_blank">Reservá tu cupo acá</a></b>
-                        </li>
-                        {% else %}
-                        <li><b>Para ver el link de inscripción tenés que registrarte al evento</b></li>
-                        {% endif %}
-                    </ul>
-                </article>
+		    
             </div>
         </div>
     </section>
@@ -1663,21 +1684,16 @@
     <div class="margin-l"></div>
 	<section class="rel full-width align-c side-grid padd-m">
         <h2 class="cromo titulo margin-none" style="display: block;font-size: 4em;">KEYNOTE</h2>
-		<img alt="Neal Norwitz" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/neal.svg" style="width:90%;max-width:470px;max-height:none;transition:none;filter: drop-shadow(0px 0px 40px #ffffff);">
+		<img alt="Neal Norwitz" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/neal.png" style="width:90%;max-width:470px;max-height:none;transition:none;filter: drop-shadow(0px 0px 40px #ffffff);">
 		<article style="max-width:600px;background:#fff;border-radius:20px;padding-bottom:40px;margin:auto;box-shadow:0 0 80px #fff;" class="padd-m">		
 			<h3 class="cromo margin-none" style="font-size: 2.5em;">Neal Norwitz</h3>
 			<p class="align-l">Neal has started several open source projects including pychecker and cppclean. He's been using Python for 25+ years (~v1.2) and worked extensively on the Python core language for 5+ years. Since 2019, Neal has been a Distinguished Engineer at ASAPP where he is the technical leader overseeing architecture for the company. He was a software engineer at Google from 2005 to 2019 where he worked on several infrastructure projects for google.com, youtube.com, and other systems.</p>
         </article>
-    </section>
-    <div class="margin-l"></div>
 
-    <section class="rel">
         <div class="relative .full-width small-padding clear center" style="margin-left: 1em; margin-right: 1em;">
                 <div class="relative align-c">
-                    <div class="row" style="background: #ffffffcc;box-shadow: inset 0 0 300px #fff, 0 0 70px #ccf;display:inline-block;padding:20px;margin:10px;">
-                        <h1 class="cromo titulo inline-block">Charlas</h1>
-                    </div>
-                    <div class="color-white">
+                    <h1 class="cromo titulo inline-block" style=" font-size: 4em;margin: 70px 0 20px; display: block;">Charlas</h1>
+                    <div style="padding-top: 30px; background-color: #fffb; box-shadow: 0 0 20px #fff;">
                         <div id="slick_charlas">
                             {% for activity in activities %}
                             <div class="row">
