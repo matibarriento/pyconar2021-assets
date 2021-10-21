@@ -161,8 +161,10 @@ body::-webkit-scrollbar-thumb {  background-color: #fff;  border-radius: 7px;}
     -webkit-text-stroke: .5px var(--c1);color: var(--c3);text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
 #inscripciones a{width: 1420px;text-decoration: none;display: inline-block;position: relative;height: 180px;}
-#inscripciones img{max-width: 100%;display: block;margin: auto;max-height:100%}
+#inscripciones img{max-width: 100%;display: block;margin: auto;max-height:100%;transition: transform 1s ease;}
+#inscripciones a:hover img { transform: scale(1.1);}
 
+#discord{transition:transform 1s ease}
 
 #timer{color: #1a2d59; border: 2px solid; border-radius: 10px;font-weight:600; padding:10px 10px 15px;max-width: 370px;}
 #clock {padding-bottom: 0px;}
@@ -293,7 +295,7 @@ article:hover #discord{transform:rotateY(0deg)rotateX(-10deg)scale(1.1)}
 .slick-slide p{text-align:left;font-family:'Jost';}
 
 .slick-slide .col-sm-6 img{border:10px outset var(--c1)}
-.slick-dots li button:before{color:#ffffff!important;background:#FFFFFF99;border:#3px solid #83d2f6; box-shadow: 0 0px 15px #fff, 0 0 10px #fff;}
+.slick-dots li button:before{color:#ffffff!important;background:#FFFFFF99;border:3px solid #83d2f6; box-shadow: 0 0px 15px #fff, 0 0 10px #fff;}
 .slick-dots{position:relative}
 .slick-slide .col-sm-6 > p:not(:nth-child(2)):not(:last-child){display:none}
 .slick-dots li.slick-active button:before {opacity:1;}
