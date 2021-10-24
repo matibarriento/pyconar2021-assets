@@ -1489,12 +1489,7 @@
 				<img id="discord" class="" src="https://raw.githubusercontent.com/matibarriento/pyconar2021-assets/master/img/discord.png" alt="Discord" style="width: 140px;">
 			</a>
    			 <p style="width: 280px;margin: 0 auto 10px;">
-				Sumate al <b>canal de Discord</b> para hacer tus preguntas, charlar con la comunidad y contactarte con nuestros sponsors.
-				{% if user.is_authenticated and user|is_registered:event_slug %}
-				<b>Pronto habilitarenos el servidor!</b>
-				{% else %}
-				<a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link tenés que registrarte al evento</b></a>
-				{% endif %}	 
+				Sumate al <a href="https://discord.gg/zMPwmSahJn" target="_blank"> <b>canal de Discord</b> </a> para hacer tus preguntas, charlar con la comunidad y contactarte con nuestros sponsors.
 			</p>  
 		</article>
 			
@@ -1567,13 +1562,9 @@
                         <li>Las speed interviews son entrevistas de 10 minutos con cada uno de los 10 sponsors que participan de la actividad este año. Tiene cupo limitado</li>
                         <li>Empresas que participan en esta edición: ASAPP, Endava, Eynes, Faraday, Invgate, Mercado Libre, Onapsis, Shipero, Spark Digital, TradeHelm</li>
                         <li> Van a ser los días martes 26, miércoles 27 y jueves 28 desde las 13.30 por Discord</li>
-                        {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/WQNzeGzadxnhPuij7" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
-                        {% else %}
-                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
-                        {% endif %}
                     </ul>
                 </article>
 
@@ -1586,13 +1577,9 @@
 
                         <li> Van a ser el día martes 26/10 y el jueves 28/10 a las 16.30 en VIVO y en DIRECTO.<li>
 
-                        {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/xyiG3Tj9163CtmBS9" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
-                        {% else %}
-                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
-                        {% endif %}
                     </ul>
                 </article>
             </div>
@@ -1613,13 +1600,9 @@
                         <li>Tallerista: Yonatan Romero</li>
                         <li>En 2018 Hernán Wilkinson hizo una charla de cómo debería ser el desarrollo de software. En esa charla mostró un lindo ejemplo de manejo de unidades en Smalltalk. En esta charla vamos a tratar de implementar esa misma idea en Python aplicando TDD.</li>
 
-                        {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/qBZhNhFdSXD9BZA38" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
-                        {% else %}
-                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
-                        {% endif %}
 
                         <li>El taller tiene lugar el 25/10 a las 15hs por Zoom </li>
                     </ul>
@@ -1631,14 +1614,9 @@
                     <ul class="align-l">
                         <li>Talleristas: Mariano Reingart y Nicolas Sandoval</li>
                         <li>PyZombis es un curso virtual completo de introducción a la programación, abierto a la comunidad y gratuito. Podrás dar tus primeros pasos con Python, construir programas sencillos y recorrer aspectos avanzados como utilización de API, interfaces Web MVC, Archivos, Bases de Datos y hasta Juegos con PyGame!!!</li>
-
-                        {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/cCFv6uAJFtpbfRpb8" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
-                        {% else %}
-                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
-                        {% endif %}
 
                         <li>El taller tiene lugar el 27/10 a las 15hs por Zoom </li>
                     </ul>
@@ -1651,13 +1629,9 @@
                         <li>Talleristas: Sofía Martin, Ariel Ramos, Liliana Hurtado, Sebastián Flores Benner</li>
                         <li>El taller se enfoca en transmitir experiencias de enseñanza realizadas en un contexto de trabajo remoto (por covid-19) con recursos de acceso libre para docentes de diferentes niveles y áreas de estudio. Somos un grupo interdisciplinario que, debido a la necesidad de formar a docentes en el uso de estas herramientas, conformamos un grupo de trabajo donde el rol de los informáticos fue adecuar los contenidos a una metodología que ponga en juego la enseñanza desde un punto de vista dinámica y pedagógica</li>
 
-                        {% if user.is_authenticated and user|is_registered:event_slug %}
                         <li>
                             <b><a href="https://forms.gle/UCtBp8zxn4QUNKhQA" target="_blank">Reservá tu cupo acá</a></b>
                         </li>
-                        {% else %}
-                        <li><b><a href="{% url "attendee_registration" event_slug %}"> <b>Para ver el link de inscripción tenés que registrarte al evento</b></a></b></li>
-                        {% endif %}
 
                         <li>El taller tiene lugar el 29/10 a las 15hs por Zoom </li>
                     </ul>
