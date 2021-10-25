@@ -1494,10 +1494,6 @@
 		</article>
 			
             <h2 class="f2"><span class="text-outline">octubre</span><span class="sub text-color-1">25 al 29</span></h2>
-            <div id="timer" class="f2 margin-auto">
-                <div id="clock" class="margin-auto"><span>-</span><span>-</span><span>-</span><span>-</span></div>
-                <div><span>días</span><span>horas</span><span>minutos</span><span>segundos</span></div>
-            </div>
             {% if event.activity_proposal_is_open and event.use_proposals %}
             <a class="btn-cromo" href="https://eventos.python.org.ar/events/pyconar2021/activity/proposal/" target="_blank">
                 <span class="cromo">proponé tu charla</span>
@@ -1856,24 +1852,6 @@
             pygons[i].style.animationDelay= time;
             pygons[i].classList.add('pyenter');
         }
-
-        //reloj
-        var countDownDate = new Date("oct 25, 2021 10:00:00").getTime();
-        var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("clock").innerHTML =  "<span>"+days +"</span><span>"+hours+"</span><span>"+minutes+"</span><span>"+seconds+"</span>";
-
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("clock").innerHTML =  "<span>0</span><span>0</span><span>0</span><span>0</span>";
-          }
-        }, 1000);
 
     </script>
     {% block more-script %}{% endblock %}
